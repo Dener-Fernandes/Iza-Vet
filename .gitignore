@@ -48,5 +48,8 @@ pids
 *.seed
 *.pid.lock
 
+# docker-compose local overrides (dev-only, must never reach production)
+docker-compose.override.yml
+
 # project docs (not part of app code)
 CLAUDE.md

@@ -1,0 +1,13 @@
+# Local development only — adds what the base docker-compose.yml deliberately
+# leaves out for safety (like exposing the DB port to the host).
+#
+# Copy this file to `docker-compose.override.yml` (gitignored) to use it:
+#   cp docker-compose.override.yml.example docker-compose.override.yml
+#
+# Compose loads docker-compose.override.yml automatically whenever it's
+# present alongside docker-compose.yml — no extra flags needed.
+
+services:
+  db:
+    ports:
+      - '${POSTGRES_PORT:-5432}:5432'

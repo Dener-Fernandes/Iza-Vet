@@ -27,11 +27,11 @@ services:
     environment:
       NODE_ENV: production
       PORT: ${API_PORT:-3000}
-      DATABASE_HOST: db
-      DATABASE_PORT: 5432
-      DATABASE_USER: ${POSTGRES_USER}
-      DATABASE_PASSWORD: ${POSTGRES_PASSWORD}
-      DATABASE_NAME: ${POSTGRES_DB}
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USERNAME: ${POSTGRES_USER}
+      DB_PASSWORD: ${POSTGRES_PASSWORD}
+      DB_NAME: ${POSTGRES_DB}
     ports:
       - '${API_PORT:-3000}:${API_PORT:-3000}'
 
